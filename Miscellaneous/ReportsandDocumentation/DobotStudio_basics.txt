@@ -1,0 +1,26 @@
+from DobotAPI import Dobot
+
+# Connect to the Dobot
+dobot = Dobot(port='COM6')  # Replace with the appropriate port or IP address
+
+# Set up initial configuration
+dobot.set_speed(100)  # Set speed to 100 mm/s
+dobot.set_acceleration(100)  # Set acceleration to 100 mm/s^2
+
+# Define movements
+dobot.move_to(x=200, y=0, z=100)  # Move to position (200, 0, 100)
+dobot.move_to(x=200, y=100, z=100)  # Move to position (200, 100, 100)
+dobot.move_to(x=0, y=100, z=100)  # Move to position (0, 100, 100)
+
+# Execute movements
+dobot.run()
+
+# Disconnect from the Dobot
+dobot.disconnect()
+
+
+
+/////////////////////////////////
+
+
+http://docs.ros.org/en/melodic/api/ros_robodk_post_processors/html/Dobot_8py_source.html
